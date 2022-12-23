@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CommunityPanelComponent } from './community-panel.component';
+import { DetailTopPanelComponent } from './detail-top-panel.component';
 
-describe('CommunityPanelComponent', () => {
-  let component: CommunityPanelComponent;
-  let fixture: ComponentFixture<CommunityPanelComponent>;
+describe('DetailTopPanelComponent', () => {
+  let component: DetailTopPanelComponent;
+  let fixture: ComponentFixture<DetailTopPanelComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommunityPanelComponent ]
+      declarations: [ DetailTopPanelComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CommunityPanelComponent);
+    fixture = TestBed.createComponent(DetailTopPanelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

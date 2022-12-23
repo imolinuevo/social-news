@@ -7,13 +7,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('./main-panel/main-panel.module').then((m) => m.MainPanelModule),
   },
-  {
-    path: 'r',
-    loadChildren: () =>
-      import('./community-panel/community-panel.module').then(
-        (m) => m.CommunityPanelModule
-      ),
-  },
   { path: '**', redirectTo: '/' },
 ];
 
