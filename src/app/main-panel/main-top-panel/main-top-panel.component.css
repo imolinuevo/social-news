@@ -1,0 +1,15 @@
+.mw-50 {
+  max-width: 50%;
+}
+
+.input-group:focus-within * {
+  background-color: white !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.dropdown-end {
+  transform: translate(-119px, 2px);
+}
