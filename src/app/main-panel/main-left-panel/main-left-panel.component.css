@@ -1,0 +1,12 @@
+.fs-c-11 {
+  font-size: 11px;
+}
+
+.fs-c-15 {
+  font-size: 15px;
+}
+
+.side-btn:hover {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}

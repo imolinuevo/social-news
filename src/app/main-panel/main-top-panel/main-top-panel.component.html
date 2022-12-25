@@ -1,5 +1,5 @@
 <div
-  class="shadow-sm p-2 bg-body d-flex justify-content-between align-items-center"
+  class="sticky-top w-100 shadow-sm p-2 bg-body d-flex justify-content-between align-items-center"
 >
   <a class="navbar-brand" href="#">
     <img
@@ -38,18 +38,18 @@
       </a>
       <div
         [ngClass]="{ show: r.isOpen }"
-        class="dropdown-menu dropdown-end"
+        class="dropdown-menu dropdown-end px-2"
         aria-labelledby="dropdownMenuButton"
       >
         <a class="dropdown-item cursor-pointer"
-          ><i class="bi-question-circle pe-2"></i> Help Center</a
+          ><i class="bi-question-circle"></i> Help Center</a
         >
         <a class="dropdown-item cursor-pointer"
-          ><i class="bi-info-circle pe-2"></i>More</a
+          ><i class="bi-info-circle"></i>More</a
         >
         <hr class="dropdown-divider" />
         <a class="dropdown-item cursor-pointer fw-semibold"
-          ><i class="bi-box-arrow-in-right pe-2"></i> Log In / Sign Up</a
+          ><i class="bi-box-arrow-in-right"></i> Log In / Sign Up</a
         >
       </div>
     </div>
