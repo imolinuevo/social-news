@@ -1,0 +1,31 @@
+<a
+  class="text-decoration-none text-dark fs-c-15 cursor-pointer"
+  id="dropMore"
+  data-toggle="dropdown"
+  aria-haspopup="true"
+  aria-expanded="false"
+  appDropdown
+  #r="appDropDown"
+>
+  <div class="m-0 w-100 px-4 py-2 side-btn align-middle">
+    <i class="bi bi-{{ topic.icon }} fs-6 me-2"></i>{{ topic.name }}
+    <i
+      class="bi float-end"
+      [ngClass]="r.isOpen ? 'bi-chevron-up' : 'bi-chevron-down'"
+    ></i>
+  </div>
+</a>
+<div
+  [ngClass]="r.isOpen ? 'd-contents' : 'd-none'"
+  class="dropdown-menu dropdown-end border-0 ps-4 w-100"
+  aria-labelledby="dropMore"
+>
+  <a
+    class="text-decoration-none text-dark fs-c-15 cursor-pointer"
+    *ngFor="let subItem of topic.subItems"
+  >
+    <div class="m-0 w-100 px-4 py-2 side-btn align-middle">
+      <span class="ps-4">{{ subItem }}</span>
+    </div>
+  </a>
+</div>

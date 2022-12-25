@@ -3,7 +3,7 @@
     >Feeds</small
   >
 </div>
-<a href="#" class="text-decoration-none text-dark fs-c-15">
+<a class="text-decoration-none text-dark fs-c-15 cursor-pointer">
   <div class="m-0 w-100 px-4 py-2 side-btn align-middle">
     <i class="bi bi-arrow-up-right-circle-fill fs-6 me-2"></i>Popular
   </div>
@@ -13,42 +13,11 @@
     >Topics</small
   >
 </div>
-<a href="#" class="text-decoration-none text-dark fs-c-15">
-  <div class="m-0 w-100 px-4 py-2 side-btn align-middle">
-    <i class="bi bi-controller fs-6 me-2"></i>Gaming
-  </div>
-</a>
-<a href="#" class="text-decoration-none text-dark fs-c-15">
-  <div class="m-0 w-100 px-4 py-2 side-btn align-middle">
-    <i class="bi bi-dribbble fs-6 me-2"></i>Sports
-  </div>
-</a>
-<a href="#" class="text-decoration-none text-dark fs-c-15">
-  <div class="m-0 w-100 px-4 py-2 side-btn align-middle">
-    <i class="bi bi-graph-up fs-6 me-2"></i>Business
-  </div>
-</a>
-<a href="#" class="text-decoration-none text-dark fs-c-15">
-  <div class="m-0 w-100 px-4 py-2 side-btn align-middle">
-    <i class="bi bi-currency-bitcoin fs-6 me-2"></i>Crypto
-  </div>
-</a>
-<a href="#" class="text-decoration-none text-dark fs-c-15">
-  <div class="m-0 w-100 px-4 py-2 side-btn align-middle">
-    <i class="bi bi-tv fs-6 me-2"></i>Television
-  </div>
-</a>
-<a href="#" class="text-decoration-none text-dark fs-c-15">
-  <div class="m-0 w-100 px-4 py-2 side-btn align-middle">
-    <i class="bi bi-star fs-6 me-2"></i>Celebrity
-  </div>
-</a>
-<a href="#" class="text-decoration-none text-dark fs-c-15">
-  <div class="m-0 w-100 px-4 py-2 side-btn align-middle">
-    <i class="bi bi-three-dots fs-6 me-2"></i>More Topics
-  </div>
-</a>
-<div class="position-fixed bottom-0 col-xl-2 d-none d-xl-block">
+<app-collapsible
+  *ngFor="let topic of topicList"
+  [topic]="topic"
+></app-collapsible>
+<div class="position-fixed bottom-0 col-xl-2 d-none d-xl-block mw-c-270">
   <div class="border-top my-3 mx-4 pt-3">
     <small
       >Create an account to follow your favorite communities and start taking
@@ -56,8 +25,8 @@
     >
   </div>
   <div class="px-3 py-2 align-middle mb-4">
-    <button type="button" class="btn btn-primary rounded-pill px-5 w-100">
-      <small class="fw-bold">Join Social News</small>
+    <button type="button" class="btn btn-primary rounded-pill px-2 w-100">
+      <small class="fw-bold text-break">Join Social News</small>
     </button>
   </div>
 </div>

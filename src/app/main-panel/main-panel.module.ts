@@ -8,6 +8,7 @@ import { MainLeftPanelComponent } from './main-left-panel/main-left-panel.compon
 import { MainCentralPanelComponent } from './main-central-panel/main-central-panel.component';
 import { MainRightPanelComponent } from './main-right-panel/main-right-panel.component';
 import { SharedModule } from '../shared/shared.module';
+import { CollapsibleComponent } from './main-left-panel/collapsible/collapsible.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     MainLeftPanelComponent,
     MainCentralPanelComponent,
     MainRightPanelComponent,
+    CollapsibleComponent,
   ],
   imports: [CommonModule, MainPanelRoutingModule, SharedModule],
 })
