@@ -1,0 +1,28 @@
+<div class="row m-0 pt-3 px-5">
+  <p class="fw-bold fs-c-14 p-0">Trending today</p>
+</div>
+<div class="row m-0 px-5 gap-4">
+  <div class="card text-bg-dark col-3 mw-c-375 p-0 border-0" *ngFor="let card of cardList">
+    <img
+      src="/assets/img/trending-1.png"
+      class="card-img mw-c-374"
+      alt="trending-card"
+      style="object-fit: cover !important"
+    />
+    <div
+      class="card-img-overlay d-flex align-items-start flex-column-reverse px-3 pb-0"
+      style="
+        background: linear-gradient(
+          rgba(255, 255, 255, 0.1),
+          rgba(0, 0, 0, 1) 90%
+        );
+      "
+    >
+      <p class="card-text fs-c-14"><small>/r space and more</small></p>
+      <p class="card-text fs-c-14 mb-1">
+        This year I made a gingerbread Curiosity rover!
+      </p>
+      <h5 class="card-title fw-bold shadow-lg mb-1">Gingerbread</h5>
+    </div>
+  </div>
+</div>
