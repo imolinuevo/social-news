@@ -1,0 +1,24 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.fs-c-14 {
+  font-size: 14px;
+}
+
+.btn-c-blue:hover,
+.btn-c-blue:focus {
+  color: var(--bs-blue) !important;
+  background-color: var(--bs-gray-300) !important;
+}
+
+.btn-c-grey:hover,
+.btn-c-grey:focus {
+  color: var(--bs-btn-color) !important;
+  background-color: var(--bs-gray-300) !important;
+}
+
+.limited-options {
+  height: 120px;
+  overflow: auto;
+}

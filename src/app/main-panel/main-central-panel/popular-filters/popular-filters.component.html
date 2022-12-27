@@ -1,0 +1,120 @@
+<div class="row m-0">
+  <p class="fw-bold fs-c-14 p-0">Popular posts</p>
+</div>
+<div class="card">
+  <div class="card-body p-2">
+    <button
+      type="button"
+      class="btn btn-outline-primary border-0 bg-light fw-bold rounded-pill mx-1 btn-c-blue float-start"
+    >
+      <i class="bi-fire pe-1 fw-bold"></i>
+      Hot
+    </button>
+    <div class="dropdown float-start">
+      <button
+        type="button"
+        class="btn btn-outline-primary border-0 bg-light fw-bold rounded-pill mx-1 btn-c-blue"
+        id="countryFilterDropdown"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+        appDropdown
+        #cf="appDropDown"
+      >
+        Spain
+        <i class="bi-chevron-down pe-1 fw-bold"></i>
+      </button>
+      <div
+        [ngClass]="{ show: cf.isOpen }"
+        class="dropdown-menu limited-options"
+        aria-labelledby="hiddenFilterDropdown"
+      >
+        <a class="dropdown-item cursor-pointer fw-bold fs-6 text-secondary"
+          >Everywhere</a
+        >
+        <a class="dropdown-item cursor-pointer fw-bold fs-6 text-secondary"
+          >United States</a
+        >
+        <a class="dropdown-item cursor-pointer fw-bold fs-6 text-secondary"
+          >Argentina</a
+        >
+        <a class="dropdown-item cursor-pointer fw-bold fs-6 text-secondary"
+          >Australia</a
+        >
+        <a class="dropdown-item cursor-pointer fw-bold fs-6 text-secondary"
+          >Bulgaria</a
+        >
+        <a class="dropdown-item cursor-pointer fw-bold fs-6 text-secondary"
+          >Canada</a
+        >
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-outline-secondary border-0 fw-bold rounded-pill mx-1 btn-c-grey float-start"
+    >
+      <i class="bi-gear-wide pe-1 fw-bold"></i>
+      New
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary border-0 fw-bold rounded-pill mx-1 btn-c-grey float-start"
+    >
+      <i class="bi-bar-chart-line pe-1 fw-bold"></i>
+      Top
+    </button>
+    <div class="dropdown float-start">
+      <button
+        type="button"
+        class="btn btn-outline-secondary border-0 fw-bold rounded-pill mx-1 btn-c-grey"
+        id="hiddenFilterDropdown"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+        appDropdown
+        #fh="appDropDown"
+      >
+        <i class="bi-three-dots p-1 fw-bold"></i>
+      </button>
+      <div
+        [ngClass]="{ show: fh.isOpen }"
+        class="dropdown-menu"
+        aria-labelledby="hiddenFilterDropdown"
+      >
+        <a class="dropdown-item cursor-pointer"
+          ><i class="bi-graph-up-arrow pe-2"></i>Rising</a
+        >
+      </div>
+    </div>
+
+    <div class="dropdown float-end">
+      <button
+        type="button"
+        class="btn btn-outline-secondary border-0 fw-bold mx-1 btn-c-grey"
+        id="displayOptionDropdown"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+        appDropdown
+        #pf="appDropDown"
+      >
+        <i class="bi-layout-split fw-bold p-1"></i>
+        <i class="bi-chevron-down fw-bold p-1"></i>
+      </button>
+      <div
+        [ngClass]="{ show: pf.isOpen }"
+        class="dropdown-menu"
+        aria-labelledby="displayOptionDropdown"
+      >
+        <a class="dropdown-item cursor-pointer"
+          ><i class="bi-layout-split pe-2"></i>Card</a
+        >
+        <hr class="dropdown-divider" />
+        <a class="dropdown-item cursor-pointer"
+          ><i class="bi-layout-three-columns pe-2"></i>Classic</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

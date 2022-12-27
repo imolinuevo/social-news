@@ -11,7 +11,7 @@
 	1.3. Central panel
 		1.3.1. Trending today
 			- List of posts: only shown in home without filters
-		1.3.2. Popular posts
+		1.3.2. Popular filters
 			- Filter by country
 			- Filter by new, top and rising (hidden)
 		1.3.3. Post list
