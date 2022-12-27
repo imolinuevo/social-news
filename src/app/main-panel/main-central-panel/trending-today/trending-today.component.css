@@ -3,11 +3,35 @@
 }
 
 .mw-c-375 {
-  width: 232px;
+  min-width: 178px;
   height: 178px;
 }
 
-.mw-c-374 {
-  width: 230px;
+.c-img-card {
+  min-width: 176px;
   height: 176px;
+  object-fit: cover !important;
+  max-width: 100%;
+}
+
+.background-custom-linear-gradient {
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 1) 90%);
+}
+
+@media only screen and (max-width: 1360px) {
+  .trending-card-4 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .trending-card-3 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .trending-card-2 {
+    display: none;
+  }
 }
