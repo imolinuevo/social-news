@@ -1,0 +1,20 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.fs-c-13 {
+  font-size: 13px;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: var(--bs-accordion-btn-icon);
+}
+
+.text-decoration-c {
+  text-decoration: none;
+}
+
+.text-decoration-c:hover,
+.text-decoration-c:active {
+  text-decoration: underline;
+}
