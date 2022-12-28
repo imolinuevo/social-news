@@ -1,29 +1,37 @@
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
+<div class="accordion" id="accordionRight">
+  <div
+    class="accordion-item"
+    *ngFor="let community of popularCommunities; let accordionIndex = index"
+  >
+    <h2 class="accordion-header" id="headingPopular">
       <button
-        class="accordion-button bg-white fw-bold text-uppercase fs-c-13 text-dark shadow-none pb-0 w-100"
+        class="accordion-button bg-white fw-bold text-uppercase fs-c-13 text-dark shadow-none py-3 w-100"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#collapseOne"
+        data-bs-target="#collapsePopular"
         aria-expanded="true"
-        aria-controls="collapseOne"
+        aria-controls="collapsePopular"
+        appAccordion
+        itemIndex="{{ accordionIndex }}"
+        #r="appAccordion"
+        [ngClass]="{ collapsed: !r.isOpen }"
       >
-        Popular communities
+        {{ community.title }}
       </button>
     </h2>
     <div
-      id="collapseOne"
-      class="accordion-collapse collapse show"
-      aria-labelledby="headingOne"
+      id="collapsePopular"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingPopular"
       data-bs-parent="#accordionExample"
+      [ngClass]="{ show: r.isOpen }"
     >
-      <div class="accordion-body">
+      <div class="accordion-body pt-2">
         <div class="row m-0 p-0">
           <a
             class="fw-bold text-dark fs-c-13 cursor-pointer text-decoration-c ps-1 pe-2 me-4 mb-2 col"
-            *ngFor="let defaultCoumminty of defaultPopularCommunities"
-            >{{ defaultCoumminty }}</a
+            *ngFor="let item of community.items"
+            >{{ item }}</a
           >
         </div>
         <button
