@@ -11,6 +11,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CollapsibleComponent } from './main-left-panel/collapsible/collapsible.component';
 import { TrendingTodayComponent } from './main-central-panel/trending-today/trending-today.component';
 import { PopularFiltersComponent } from './main-central-panel/popular-filters/popular-filters.component';
+import { PostListComponent } from './main-central-panel/post-list/post-list.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PopularFiltersComponent } from './main-central-panel/popular-filters/po
     CollapsibleComponent,
     TrendingTodayComponent,
     PopularFiltersComponent,
+    PostListComponent,
   ],
   imports: [CommonModule, MainPanelRoutingModule, SharedModule],
 })

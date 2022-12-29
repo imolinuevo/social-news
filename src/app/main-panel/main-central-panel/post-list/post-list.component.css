@@ -1,0 +1,29 @@
+.card:hover {
+  border: var(--bs-border-width) var(--bs-border-style) var(--bs-gray-500) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.c-caret:hover {
+  color: var(--bs-blue) !important;
+}
+
+.count-column {
+  width: 3em;
+}
+
+.fs-c-13 {
+  font-size: 13px;
+}
+
+.fs-c-17 {
+  font-size: 17px;
+}
+
+.btn-c-grey:hover,
+.btn-c-grey:focus {
+  color: var(--bs-btn-color) !important;
+  background-color: var(--bs-gray-300) !important;
+}
