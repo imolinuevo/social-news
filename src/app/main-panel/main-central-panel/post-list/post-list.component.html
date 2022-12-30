@@ -1,21 +1,22 @@
-<div class="card mt-3 cursor-pointer">
+<div class="card mt-3 cursor-pointer" *ngFor="let post of postList">
   <div class="card-body p-0 rounded d-flex">
     <div
       class="bg-light rounded count-column d-flex flex-column justify-content-start align-items-center pt-2"
     >
       <i class="bi-chevron-up c-caret rounded"></i>
-      <span class="fw-bold fs-c-13">4.0k</span>
+      <span class="fw-bold fs-c-13">{{ post.voteCount }}</span>
       <i class="bi-chevron-down c-caret rounded"></i>
     </div>
     <div class="w-100 d-flex flex-column p-2 pb-1">
       <div class="w-100 d-flex align-items-center fs-c-13">
         <i class="bi-reddit text-secondary fs-6"></i>
-        <small class="fw-bold px-2">r/AskSocialNews</small>
-        <span class="text-secondary">• Posted by u/someuser 11 hours ago</span>
+        <small class="fw-bold px-2">r/{{ post.community }}</small>
+        <span class="text-secondary"
+          >• Posted by u/{{ post.owner }} {{ post.postingTime }} ago</span
+        >
       </div>
       <p class="w-100 fw-semibold m-0 fs-c-17 pt-1 pb-3">
-        What celebrity can you simply not stand, even if everyone else likes
-        them?
+        {{ post.title }}
       </p>
       <div class="w-100">
         <button
@@ -23,7 +24,7 @@
           class="btn btn-outline-secondary border-0 fw-bold rounded btn-c-grey float-start p-1 d-flex align-items-center me-2"
         >
           <i class="bi-chat-left fw-bold fs-5"></i>
-          <span class="ps-1 fs-c-13">7.6k Comments</span>
+          <span class="ps-1 fs-c-13">{{ post.commentsCount }} Comments</span>
         </button>
         <button
           type="button"
