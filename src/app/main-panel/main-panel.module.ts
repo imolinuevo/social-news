@@ -12,6 +12,7 @@ import { CollapsibleComponent } from './main-left-panel/collapsible/collapsible.
 import { TrendingTodayComponent } from './main-central-panel/trending-today/trending-today.component';
 import { PopularFiltersComponent } from './main-central-panel/popular-filters/popular-filters.component';
 import { PostListComponent } from './main-central-panel/post-list/post-list.component';
+import { PolicyPanelComponent } from './main-right-panel/policy-panel/policy-panel.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { PostListComponent } from './main-central-panel/post-list/post-list.comp
     TrendingTodayComponent,
     PopularFiltersComponent,
     PostListComponent,
+    PolicyPanelComponent,
   ],
   imports: [CommonModule, MainPanelRoutingModule, SharedModule],
 })

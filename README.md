@@ -52,7 +52,7 @@
 		- Follower count and online count
 	2.5. Suggest panel
 		- List of small posts with community, shortened title, upvote %, comements count and date
-	2.6. Footer panel
+	2.6. Policy panel
 		- Links to static pages and license
 3. Community view conditions
 	3.1. Search bar
