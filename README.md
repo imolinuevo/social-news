@@ -86,3 +86,7 @@
 ## Components
 - Generate main top panel inside main module
 	` ng g c main-panel/main-top-panel --style css --module main-panel `
+
+## Services
+- Generate main panel service
+	` ng g s main-panel/main `

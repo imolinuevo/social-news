@@ -1,11 +1,16 @@
-<div class="backdrop"></div>
 <div
-  class="modal fade show d-block"
+  class="backdrop"
+  [ngClass]="{ 'd-none': !isOpen }"
+  (click)="onClose()"
+></div>
+<div
+  class="modal fade"
   id="loginModal"
   tabindex="-1"
   aria-labelledby="loginModalLabel"
   aria-modal="true"
   role="dialog"
+  [ngClass]="{ 'show d-block': isOpen }"
 >
   <div class="modal-dialog d-flex justify-content-center">
     <div class="modal-content">
@@ -16,6 +21,7 @@
           class="btn-close"
           data-bs-dismiss="modal"
           aria-label="Close"
+          (click)="onClose()"
         ></button>
       </div>
       <div class="modal-body mx-5">

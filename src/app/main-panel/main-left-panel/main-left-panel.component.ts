@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MainService } from '../main.service';
 
 @Component({
   selector: 'app-main-left-panel',
@@ -27,4 +28,10 @@ export class MainLeftPanelComponent {
     },
     { name: 'More Topics', icon: 'three-dots', subItems: ['Art', 'History'] },
   ];
+
+  constructor(private mainService: MainService) {}
+
+  openModal() {
+    this.mainService.openModalAction('register');
+  }
 }
