@@ -3,11 +3,11 @@
 	1.1. Top panel
 		- Left logo: link to home
 		- Search bar: on enter filter posts by title, hide trending
-		- Login button: on click open login popup
+		- Login button: on click open login modal
 		- User button: on click expand options
 	1.2. Left panel
 		- Dynamic list of items with subitems
-		- Join button: on click show login popup on register version
+		- Join button: on click show login modal on register version
 	1.3. Central panel
 		1.3.1. Trending today
 			- List of posts: only shown in home without filters
@@ -20,17 +20,17 @@
 				- Upper community bar: link to community
 				- Full title: on click open post panel
 				- Faded description
-				- Link to comments with count: on click show comments in popup
+				- Link to comments with count: on click show comments in modal
 	1.4. Right panel
 		- Accordion of list of list of items with subitems: on click navigate to community
 	1.5. Footer panel
 		- Links to static pages and license
-	1.6. Login popup
+	1.6. Login modal
 		- Can only be oppened if not logged in
 		- Log in or register form
 2. Post detail panel
-	- On ESC close popup
-	- On click outside the panel: close popup
+	- On ESC close modal
+	- On click outside the panel: close modal
 	2.1. Top panel
 		- Upvote or downvote buttons with result: on click save user vote
 		- Shortened title

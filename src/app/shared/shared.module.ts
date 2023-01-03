@@ -4,6 +4,7 @@ import { FooterPanelComponent } from './footer-panel/footer-panel.component';
 import { LoginPopupComponent } from './login-popup/login-popup.component';
 import { DropdownDirective } from './dropdown.directive';
 import { AccordionDirective } from './accordion.directive';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { AccordionDirective } from './accordion.directive';
     LoginPopupComponent,
     DropdownDirective,
     AccordionDirective,
+    ModalComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -18,6 +20,7 @@ import { AccordionDirective } from './accordion.directive';
     LoginPopupComponent,
     DropdownDirective,
     AccordionDirective,
+    ModalComponent,
   ],
 })
 export class SharedModule {}
