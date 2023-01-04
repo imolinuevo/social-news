@@ -1,6 +1,34 @@
-<p>post-detail-panel works!</p>
-<app-detail-top-panel></app-detail-top-panel>
+<!-- <app-detail-top-panel></app-detail-top-panel>
 <app-detail-content-panel></app-detail-content-panel>
 <app-detail-comments-panel></app-detail-comments-panel>
 <app-detail-description-panel></app-detail-description-panel>
-<app-detail-suggest-panel></app-detail-suggest-panel>
+<app-detail-suggest-panel></app-detail-suggest-panel> -->
+
+<div class="backdrop" (click)="onClose()"></div>
+<div
+  class="modal fade show d-block"
+  id="loginModal"
+  tabindex="-1"
+  aria-labelledby="loginModalLabel"
+  aria-modal="true"
+  role="dialog"
+>
+  <div class="modal-dialog d-flex justify-content-center">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <h1 class="modal-title fs-5" id="loginModalLabel"></h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="onClose()"
+        ></button>
+      </div>
+      <div class="modal-body mx-5">
+        <p>Detail modal</p>
+      </div>
+      <div class="modal-footer border-top-0"></div>
+    </div>
+  </div>
+</div>
