@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
 import { MainService } from 'src/app/main-panel/main.service';
 
 @Component({
@@ -9,7 +10,10 @@ import { MainService } from 'src/app/main-panel/main.service';
 export class ModalComponent {
   isOpen: boolean = false;
 
-  constructor(private mainService: MainService) {}
+  constructor(
+    private mainService: MainService,
+    private authService: AuthService
+  ) {}
 
   ngOnInit() {
     this.mainService.modalClicked.subscribe((mode) => {
@@ -18,6 +22,11 @@ export class ModalComponent {
   }
 
   onClose() {
+    this.isOpen = false;
+  }
+
+  logIn() {
+    this.authService.logIn();
     this.isOpen = false;
   }
 

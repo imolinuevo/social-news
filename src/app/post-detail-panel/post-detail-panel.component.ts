@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,6 +10,12 @@ export class PostDetailPanelComponent {
   constructor(private router: Router) {}
 
   onClose() {
+    this.router.navigate(['/']);
+  }
+
+  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(
+    event: KeyboardEvent
+  ) {
     this.router.navigate(['/']);
   }
 }

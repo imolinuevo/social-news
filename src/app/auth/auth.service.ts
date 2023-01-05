@@ -11,6 +11,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService implements CanActivate {
+  isLoggedIn: boolean = false;
+
   constructor() {}
 
   canActivate(
@@ -21,6 +23,10 @@ export class AuthService implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    return true;
+    return this.isLoggedIn;
+  }
+
+  logIn() {
+    this.isLoggedIn = true;
   }
 }
