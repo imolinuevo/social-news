@@ -5,15 +5,21 @@ import {
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
+export interface LoginResponse {
+  access_token: string;
+}
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService implements CanActivate {
   isLoggedIn: boolean = false;
+  accessToken: string = '';
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -27,6 +33,15 @@ export class AuthService implements CanActivate {
   }
 
   logIn() {
+    this.http
+      .post<LoginResponse>('http://localhost:5000/login', {
+        username: 'test',
+        password: 'test',
+      })
+      .subscribe((data) => {
+        this.accessToken = data.access_token;
+      });
+
     this.isLoggedIn = true;
   }
 }
