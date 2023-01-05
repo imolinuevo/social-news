@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainPanelComponent } from './main-panel.component';
+import { AuthService } from '../auth/auth.service';
 
 const routes: Routes = [
   {
@@ -9,6 +10,7 @@ const routes: Routes = [
     children: [
       {
         path: 'detail',
+        canActivate: [AuthService],
         loadChildren: () =>
           import('../post-detail-panel/post-detail-panel.module').then(
             (m) => m.PostDetailPanelModule
