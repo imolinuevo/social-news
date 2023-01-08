@@ -14,17 +14,33 @@
       src="/assets/img/trending-{{ card.id }}.png"
       class="card-img c-img-card"
       alt="trending-card"
+      *ngIf="!isLoading"
     />
     <div
-      class="card-img-overlay d-flex align-items-start flex-column-reverse px-3 pb-0 background-custom-linear-gradient"
+      class="card-img-overlay d-flex align-items-start flex-column-reverse px-3 pb-0"
+      [ngClass]="{
+        'placeholder-glow': isLoading,
+        'background-custom-linear-gradient': !isLoading
+      }"
     >
-      <p class="card-text fs-c-14">
+      <p
+        class="card-text fs-c-14"
+        [ngClass]="{ 'placeholder w-25': isLoading }"
+      >
         <small>/r {{ card.community }}</small>
       </p>
-      <p class="card-text fs-c-14 mb-1">
+      <p
+        class="card-text fs-c-14 mb-1"
+        [ngClass]="{ 'placeholder w-50': isLoading }"
+      >
         {{ card.description }}
       </p>
-      <h5 class="card-title fw-bold shadow-lg mb-1">{{ card.title }}</h5>
+      <h5
+        class="card-title fw-bold shadow-lg mb-1"
+        [ngClass]="{ 'placeholder w-100': isLoading }"
+      >
+        {{ card.title }}
+      </h5>
     </div>
   </div>
 </div>
