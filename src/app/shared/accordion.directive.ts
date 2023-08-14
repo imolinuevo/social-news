@@ -4,15 +4,16 @@ import {
   HostBinding,
   Input,
   ChangeDetectorRef,
+  AfterViewInit,
 } from '@angular/core';
 
 @Directive({
   selector: '[appAccordion]',
   exportAs: 'appAccordion',
 })
-export class AccordionDirective {
+export class AccordionDirective implements AfterViewInit {
   private wasInside = false;
-  @Input() itemIndex: string = 'closed';
+  @Input() itemIndex = 'closed';
   @HostBinding('class.show') isOpen = true;
 
   constructor(private cdRef: ChangeDetectorRef) {}

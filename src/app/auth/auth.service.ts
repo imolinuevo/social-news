@@ -1,10 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  CanActivate,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot,
-  UrlTree,
-} from '@angular/router';
+import { CanActivate, UrlTree } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -16,15 +11,12 @@ export interface LoginResponse {
   providedIn: 'root',
 })
 export class AuthService implements CanActivate {
-  isLoggedIn: boolean = false;
-  accessToken: string = '';
+  isLoggedIn = false;
+  accessToken = '';
 
   constructor(private http: HttpClient) {}
 
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ):
+  canActivate():
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree>
     | boolean

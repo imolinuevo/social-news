@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
 import { MainService } from 'src/app/main-panel/main.service';
 
@@ -7,16 +7,16 @@ import { MainService } from 'src/app/main-panel/main.service';
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css'],
 })
-export class ModalComponent {
-  isOpen: boolean = false;
+export class ModalComponent implements OnInit {
+  isOpen = false;
 
   constructor(
     private mainService: MainService,
-    private authService: AuthService
+    private authService: AuthService,
   ) {}
 
   ngOnInit() {
-    this.mainService.modalClicked.subscribe((mode) => {
+    this.mainService.modalClicked.subscribe(() => {
       this.isOpen = true;
     });
   }
@@ -30,9 +30,7 @@ export class ModalComponent {
     this.isOpen = false;
   }
 
-  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(
-    event: KeyboardEvent
-  ) {
+  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler() {
     this.isOpen = false;
   }
 }

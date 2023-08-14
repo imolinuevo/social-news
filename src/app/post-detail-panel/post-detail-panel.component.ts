@@ -12,16 +12,14 @@ export class PostDetailPanelComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private postDetailService: PostDetailService
+    private postDetailService: PostDetailService,
   ) {}
 
   onClose() {
     this.router.navigate(['/']);
   }
 
-  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(
-    event: KeyboardEvent
-  ) {
+  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler() {
     this.router.navigate(['/']);
   }
 

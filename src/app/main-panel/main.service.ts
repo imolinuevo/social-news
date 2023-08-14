@@ -7,8 +7,6 @@ import { Subject } from 'rxjs';
 export class MainService {
   modalClicked = new Subject<string>();
 
-  constructor() {}
-
   openModalAction(mode: string) {
     this.modalClicked.next(mode);
   }
