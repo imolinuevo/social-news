@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, UrlTree } from '@angular/router';
+import { UrlTree } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -10,7 +10,7 @@ export interface LoginResponse {
 @Injectable({
   providedIn: 'root',
 })
-export class AuthService implements CanActivate {
+export class AuthService  {
   isLoggedIn = false;
   accessToken = '';
 
