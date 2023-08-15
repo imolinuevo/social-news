@@ -17,16 +17,18 @@ steps:
     displayName: "Install angular & dependencies"
 
   - script: |
+      ng lint
+    displayName: "Run linting with ESLint"
+
+  # Run unit tests
+
+  # Test coverage
+
+  # Run sonar?
+
+  - script: |
       ng build --configuration production
     displayName: "Build for production"
-# Run eslint
-
-# Run unit tests
-
-# Test coverage
-
-# Run sonar?
-
 # Archive files
 
 # Build docker image
