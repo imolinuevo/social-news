@@ -17,7 +17,7 @@ steps:
     displayName: "Install angular & dependencies"
 
   - script: |
-      ng build --prod
+      ng build --configuration production
     displayName: "Build for production"
 # Run eslint
 
