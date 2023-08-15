@@ -27,7 +27,7 @@ steps:
   - task: PublishTestResults@2
     condition: succeededOrFailed()
     inputs:
-      testResultsFiles: "**/test-*.xml"
+      testResultsFiles: "**/TESTS-*.xml"
       testRunTitle: "Publish test results"
 
   # Run sonar?
