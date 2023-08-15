@@ -35,13 +35,12 @@ steps:
       codeCoverageTool: Cobertura
       summaryFileLocation: "$(Build.SourcesDirectory)/coverage/**/*.xml"
 
-  # Run sonar?
-
   - script: |
       ng build --configuration production
     displayName: "Build for production"
-# Archive files
 
+  - publish: $(System.DefaultWorkingDirectory)/dist
+    artifact: dist
 # Build docker image
 
 # Push to dockerhub
