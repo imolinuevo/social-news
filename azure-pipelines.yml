@@ -21,10 +21,14 @@ steps:
     displayName: "Run linting with ESLint" # control when does not lint
 
   - script: |
-      ng test --browsers=ChromeHeadless --code-coverage --watch=false
+      ng test --browsers=ChromeHeadless --code-coverage --watch=false --reporters=junit
     displayName: "Run testing" # control when does not pass
 
-  # Test coverage
+  - task: PublishTestResults@2
+    condition: succeededOrFailed()
+    inputs:
+      testResultsFiles: "**/test-*.xml"
+      testRunTitle: "Publish test results"
 
   # Run sonar?
 
