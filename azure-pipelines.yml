@@ -10,20 +10,25 @@ steps:
     inputs:
       versionSpec: "16.x"
     displayName: "Install Node.js 16.x"
-# install angular & dependencies
 
-# build for production
+  - script: |
+      npm install -g @angular/cli
+      npm install
+    displayName: "Install angular & dependencies"
 
-# run eslint
+  - script: |
+      ng build --prod
+    displayName: "Build for production"
+# Run eslint
 
-# run unit tests
+# Run unit tests
 
-# test coverage
+# Test coverage
 
-# run sonar?
+# Run sonar?
 
-# archive files
+# Archive files
 
-# build docker image
+# Build docker image
 
-# push to dockerhub
+# Push to dockerhub
