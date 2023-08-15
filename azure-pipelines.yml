@@ -33,8 +33,7 @@ steps:
   - task: PublishCodeCoverageResults@1
     inputs:
       codeCoverageTool: Cobertura
-      summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/coverage.xml"
-      reportDirectory: "$(System.DefaultWorkingDirectory)/**/htmlcov"
+      summaryFileLocation: "$(Build.SourcesDirectory)/coverage/**/*.xml"
 
   # Run sonar?
 
